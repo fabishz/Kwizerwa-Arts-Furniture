@@ -1,73 +1,128 @@
-# Welcome to your Lovable project
+# Kwizerwa Arts Furniture
 
-## Project info
+Kwizerwa Arts Furniture is a web application showcasing handcrafted, locally produced furniture and decor. The project provides an online catalog, product detail pages, and a simple ordering/contact flow to help customers discover and inquire about custom and ready-made pieces.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Key goals:
+- Present high-quality product photography and detailed descriptions.
+- Make it easy for customers to inquire about custom orders and availability.
+- Provide a maintainable, responsive frontend built with modern web tooling.
 
-## How can I edit this code?
+Table of Contents
+- About
+- Features
+- Technology Stack
+- Getting Started
+  - Prerequisites
+  - Install
+  - Local development
+- Project Structure
+- Deployment
+- Contributing
+- License
+- Contact
 
-There are several ways of editing your application.
+About
 
-**Use Lovable**
+This repository contains the frontend code for the Kwizerwa Arts Furniture website. The design focuses on clean presentation, accessibility, and a smooth browsing experience on both desktop and mobile devices.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- Product listing and detail pages
+- Responsive layout and accessible components
+- Simple inquiry/contact flow for purchases and custom orders
+- Structured content for easy SEO and sharing
 
-**Use your preferred IDE**
+Technology Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- JavaScript (primary)
+- Vite (development/build)
+- React
+- Tailwind CSS
+- shadcn-ui (UI primitives)
+- TypeScript (as used in parts of the project)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Getting Started
 
-Follow these steps:
+These instructions will get the project running on your local machine for development and testing purposes.
+
+Prerequisites
+
+- Node.js (LTS recommended)
+- npm or yarn
+
+Install
+
+1. Clone the repository
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+git clone https://github.com/fabishz/Kwizerwa-Arts-Furniture.git
+cd Kwizerwa-Arts-Furniture
 ```
 
-**Edit a file directly in GitHub**
+2. Install dependencies
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm install
+# or
+# yarn install
+```
 
-**Use GitHub Codespaces**
+Local development
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Start the development server with hot reload:
 
-## What technologies are used for this project?
+```sh
+npm run dev
+# or
+# yarn dev
+```
 
-This project is built with:
+Open http://localhost:5173 (or the URL shown in your terminal) to view the site.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Available scripts
 
-## How can I deploy this project?
+- `npm run dev` — start dev server
+- `npm run build` — produce production build
+- `npm run preview` — preview production build locally
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Project Structure
 
-## Can I connect a custom domain to my Lovable project?
+- /src — application source
+  - /components — reusable UI components
+  - /pages — route pages
+  - /assets — images and static assets
+  - /styles — global styles and Tailwind config
 
-Yes, you can!
+(Adjust paths above if your project structure differs.)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Deployment
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Build the project for production:
+
+```sh
+npm run build
+```
+
+Host the output in `dist/` on any static hosting service (Netlify, Vercel, GitHub Pages, or a static file server). If using Vercel or Netlify, connect your GitHub repository and configure the build command to `npm run build` and the publish directory to `dist`.
+
+Contributing
+
+Contributions are welcome. To contribute:
+1. Fork the repository.
+2. Create a feature branch: `git checkout -b feat/my-feature`.
+3. Commit your changes and push to your fork.
+4. Open a pull request describing the change.
+
+License
+
+If you would like this project to be open source, consider adding a license file. If no license is present, the repository is not open source by default.
+
+Contact
+
+For questions or support, open an issue or contact the repository owner: https://github.com/fabishz
+
+Acknowledgements
+
+- Thanks to the authors of Vite, React, Tailwind CSS, and shadcn-ui for providing the tools used in this project.
+
+End of README

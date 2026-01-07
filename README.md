@@ -123,6 +123,6 @@ For questions or support, open an issue or contact the repository owner: https:/
 
 Acknowledgements
 
-- Thanks to the authors of Vite, React, Tailwind CSS, and shadcn-ui for providing the tools used in this project.
+- Thanks to the authors of Vite, React, Tailwind CSS, Next and shadcn-ui for providing the tools used in this project.
 
 End of README

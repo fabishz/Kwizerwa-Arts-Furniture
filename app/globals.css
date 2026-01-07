@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm Rwandan-inspired palette */
+    --background: 40 33% 97%;
+    --foreground: 25 30% 15%;
+
+    --card: 40 30% 95%;
+    --card-foreground: 25 30% 15%;
+
+    --popover: 40 33% 97%;
+    --popover-foreground: 25 30% 15%;
+
+    /* Rich terracotta brown */
+    --primary: 25 60% 35%;
+    --primary-foreground: 40 33% 97%;
+
+    /* Sage green */
+    --secondary: 140 25% 45%;
+    --secondary-foreground: 40 33% 97%;
+
+    /* Warm cream */
+    --muted: 40 25% 90%;
+    --muted-foreground: 25 15% 45%;
+
+    /* Forest green accent */
+    --accent: 150 30% 30%;
+    --accent-foreground: 40 33% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 25 60% 35%;
+
+    --radius: 0.5rem;
+
+    /* Custom tokens */
+    --gold: 42 80% 55%;
+    --terracotta: 15 65% 50%;
+    --wood-dark: 25 40% 20%;
+    --wood-light: 35 35% 75%;
+    --cream: 40 40% 95%;
+    --forest: 150 35% 25%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(25 40% 20% / 0.9), hsl(25 30% 15% / 0.95));
+    --gradient-warm: linear-gradient(180deg, hsl(40 33% 97%), hsl(35 30% 92%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 60% 35%), hsl(15 65% 50%));
+    --gradient-gold: linear-gradient(135deg, hsl(42 80% 55%), hsl(35 70% 45%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(25 30% 15% / 0.1);
+    --shadow-medium: 0 8px 30px -6px hsl(25 30% 15% / 0.15);
+    --shadow-strong: 0 20px 50px -12px hsl(25 30% 15% / 0.25);
+    --shadow-glow: 0 0 40px hsl(42 80% 55% / 0.2);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 25 30% 10%;
+    --foreground: 40 33% 95%;
+
+    --card: 25 25% 15%;
+    --card-foreground: 40 33% 95%;
+
+    --popover: 25 25% 12%;
+    --popover-foreground: 40 33% 95%;
+
+    --primary: 35 55% 55%;
+    --primary-foreground: 25 30% 10%;
+
+    --secondary: 140 20% 35%;
+    --secondary-foreground: 40 33% 95%;
+
+    --muted: 25 20% 20%;
+    --muted-foreground: 35 15% 60%;
+
+    --accent: 150 25% 40%;
+    --accent-foreground: 40 33% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 20% 25%;
+    --input: 25 20% 25%;
+    --ring: 35 55% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-terracotta;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 ease-out hover:shadow-strong hover:-translate-y-1;
+  }
+
+  .btn-glow {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-glow::after {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: var(--gradient-gold);
+    filter: blur(20px);
+    z-index: -1;
+  }
+
+  .btn-glow:hover::after {
+    @apply opacity-40;
+  }
+
+  .pattern-african {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30L30 0z' fill='none' stroke='%238B7355' stroke-opacity='0.08' stroke-width='1'/%3E%3C/svg%3E");
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
